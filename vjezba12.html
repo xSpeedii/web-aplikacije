@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="hr">
+<head>
+    <title>Primjer forme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        label {
+            font-weight: bold; /* Podebljavanje naslova */
+            display: block; /* Postavljanje naslova iznad polja */
+            margin-top: 10px;
+        }
+        .required:after {
+            content: " *"; /* Dodavanje crvene zvjezdice */
+            color: red; /* Postavljanje crvene boje */
+        }
+        input, select, textarea {
+            margin-bottom: 10px; /* Razmak između polja */
+        }
+    </style>
+</head>
+<body>
+    <h1>Kontakt forma</h1>
+    
+    <form action="/submit" method="POST">
+        <label for="fname" class="required">First name</label>
+        <input type="text" id="fname" name="fname" required placeholder="Unesite svoje ime" />
+
+        <br>
+
+        <label for="lname" class="required">Last name</label>
+        <input type="text" id="lname" name="lname" required placeholder="Unesite svoje prezime" />
+
+        <br>
+
+        <label for="email" class="required">Your email</label>
+        <input type="email" id="email" name="email" required placeholder="Unesite svoj email" />
+
+        <br>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="hrvatska">Hrvatska</option>
+            <option value="srbiju">Srbija</option>
+            <option value="bosna">Bosna i Hercegovina</option>
+            <option value="slovenija">Slovenija</option>
+        </select>
+
+        <br>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Napišite svoju poruku..."></textarea>
+
+        <br>
+
+        <input type="submit" value="Send" />
+        <input type="reset" value="Reset" />
+    </form>
+</body>
+</html>
